@@ -505,14 +505,85 @@
             </li>
           </ul>
         </div>
+        <div class="container-subscribe">
+          <h4 class="title-subscribe">suscríbase al boletín informativo</h4>
+          <form name="fotter_form">
+            <label for="user_email"></label>
+            <input
+              class="container-subscribe__input"
+              type="email"
+              name="email"
+              id="user_email"
+              placeholder="Correo electronico"
+            />
+            <button class="button-subscribe" type="submit">
+              <svg class="subscribe" width="133" height="30">
+                <use href="./images/symbol-defs.svg#icon-subscribe"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <div class="icon-right" data-modal-close>
-          <svg class="icon-close-modal">
-            <use href="./images/close.svg#icon-close"></use>
+        <div class="icon-right">
+          <svg class="icon-close-modal" data-modal-close>
+            <use href="./images/symbol-defs.svg#icon-close"></use>
           </svg>
+        </div>
+        <div>
+          <form
+            class="modal_body"
+            name="signup_form"
+            autocomplete="on"
+            novalidate
+          >
+            <div>
+              <h4 class="modal_title">
+                Deje sus datos, nos contactaremos con usted
+              </h4>
+            </div>
+
+            <label>
+              Nombre
+              <input class="modal_name_box" type="name" name="name_modal" />
+              <svg class="modal_svg">
+                <use href="./images/symbol-defs.svg#icon-user-modal"></use>
+              </svg>
+            </label>
+            <label>
+              Teléfono
+              <input class="modal_name_box" type="phone" name="phone_modal" />
+              <svg class="modal_svg">
+                <use href="./images/symbol-defs.svg#icon-phone-modal"></use>
+              </svg>
+            </label>
+            <label>
+              E-mail
+              <input class="modal_name_box" type="email" name="email_modal" />
+              <svg class="modal_svg">
+                <use href="./images/symbol-defs.svg#icon-mail-modal"></use>
+              </svg>
+            </label>
+            <label>
+              Comentarios
+              <textarea
+                class="modal_comment"
+                name="Comment_modal"
+                rows="4"
+                placeholder="Introduzca el texto"
+                required
+              >
+              </textarea>
+            </label>
+            <!-- checkbox -->
+            <label> </label>
+            <!-- checkbox -->
+            <div>
+              <button class="modal_button" type="submit">Enviar</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>

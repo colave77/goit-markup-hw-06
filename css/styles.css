@@ -423,7 +423,7 @@ h4 {margin: 0px;}
     position: relative;
     overflow: hidden;}
 
-/* Ventana modal */
+/* Ventana modal----------------------------------------------- */
 .backdrop{
     display: flex;
     justify-content: center;
@@ -451,6 +451,8 @@ h4 {margin: 0px;}
 .icon-close-modal{
     width: 30px;
     height: 30px;
+    margin-right: 8px;
+    margin-top: 8px;
 }
 
 .icon-right{
@@ -469,26 +471,165 @@ h4 {margin: 0px;}
     background-color: var(--blue-color);
 }
 
-/* nombres en imagenes */
-.img-label{
-    position: relative;
-}
-.font-label{
+.modal_body{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
-    width: 372px;
-    height: 70px;
-    position: absolute;
-    background: #2F303ACC;
-    transform: translateY(-105%);
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: var(--gray-color);
 }
 
-.title-label{
-    height: 16px;
+.modal_body label {
+    /* display: flex;
+    flex-direction: column; */
+    /* position:absolute; */
+    width: 448px;
+    margin-bottom: 1px;
+    display: flex;
+    flex-direction: column;
+    /* margin-top: 25px; */
+}
+.modal_svg{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    top: -30px;
+    left: 10px;
+    }
+.modal_title{
+    width: 448px;
+    height: 23px;
+    left: 576px;
+    top: 261px;
+    color: var(--black-color);
+    font-family: 'Roboto';
+    font-style: normal;
     font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
     letter-spacing: 0.03em;
+    margin-bottom: 25px;
+}
+.modal_name_box{
+    box-sizing: border-box;
+    width: 448px;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding-left: 40px;
+}
+
+label:focus-within, label:hover{
+    fill: var(--blue-color);
+}
+.modal_name_box:focus-within, textarea:focus-within, .modal_name_box:hover, textarea:hover{
+    border: 1px solid var(--blue-color);
+}
+
+
+.modal_name_box,textarea{
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: none;
+}
+
+.modal_comment{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    padding: 12px 16px;
+}
+.modal_checkbox{
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    pointer-events: none;
+    border: 2px solid #212121;
+    border-radius: 2px;
+    /* background:var(--blue-color) */
+}
+.modal_checkbox:hover{
+    background:var(--blue-color);
+}
+.checkbox__text{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    }
+.modal_button{
+    width: 200px;
+    height: 50px;
+    background: #2196F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
     color: var(--white-color);
+    border-width: 0px;
+}
+/* /////////////////////////////////////////////////////////////// */
+
+.container-subscribe {
+    
+    display: flex;
+    flex-direction: column;
+    padding-left: 156px;
+    align-content: space-around;
+}
+
+form .container-subscribe{
+    display: flex;
+}
+
+.title-subscribe {
+    color: var(--white-color);
+    text-transform: uppercase;
+}
+.container-subscribe__input {
+    width: 358px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 16px;
+    padding-top: 15px;
+    padding-right: 101px;
+    padding-bottom: 15PX;
+    padding-left: 10PX;
+    border-radius: 4px;
+    margin-right: 10px;
+    background: rgba(50, 49, 58, 0.15);
+}
+
+.button-subscribe {
+    width: 200px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.06em;
+    border-radius: 4px;
+    border: none;
+    background-color: var(--blue-color);
+}
+
+.subscribe {
+    font-weight: 700;
+    line-height: 30px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    fill: var(--white-color);
+    cursor: pointer;
 }
